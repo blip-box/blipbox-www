@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="blipbox-mark-anim-title">
+  <title id="blipbox-mark-anim-title">blipbox</title>
+  <style>
+    .blip { animation: emit 4.5s cubic-bezier(0.15, 0.7, 0.3, 1) infinite; }
+    .blip:nth-child(2) { animation-delay: 1.5s; }
+    .blip:nth-child(3) { animation-delay: 3s; }
+    @keyframes emit {
+      0%   { transform: translateY(0);      opacity: 1; }
+      55%  { opacity: 1; }
+      100% { transform: translateY(-270px); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .blip { animation: none; opacity: 0; }
+    }
+  </style>
+  <!-- Blips start behind the top face and rise out of the box -->
+  <g fill="#FFCB25">
+    <rect class="blip" x="478" y="256" width="44" height="44" rx="7"/>
+    <rect class="blip" x="404" y="268" width="34" height="34" rx="6"/>
+    <rect class="blip" x="560" y="262" width="28" height="28" rx="5"/>
+  </g>
+  <g stroke="#0D0D0B" stroke-width="30" stroke-linejoin="round">
+    <polygon fill="#FFCB25" points="651,335 791,239 791,671 651,767"/>
+    <polygon fill="#FFCB25" points="225,335 651,335 791,239 365,239"/>
+    <rect fill="#EF2720" x="225" y="335" width="426" height="432" rx="18"/>
+  </g>
+  <g fill="#FFCB25" stroke="#FFCB25" stroke-width="14" stroke-linejoin="round">
+    <path d="M380 441 H470 V549 H409 V613 H323 V502 H380 Z"/>
+    <rect x="497" y="611" width="46" height="56" rx="4"/>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+/* blipbox design tokens
+   Every value here is derived from the mark (brand/logo.svg):
+   the four colors are sampled from it, and the three structural
+   numbers (stroke, radius, pixel) are its outline, corner and pixel unit. */
+
+:root {
+  color-scheme: light;
+
+  /* Color: paper and ink are the page, red is a surface, yellow is a signal */
+  --paper:      #FCFBF9;
+  --paper-2:    #F3F1EC;
+  --ink:        #0D0D0B;
+  --ink-2:      #4A4744;
+  --ink-3:      #706A64;
+  --line:       rgba(13, 13, 11, 0.14);
+  --red:        #EF2720;
+  --red-deep:   #C81C16;
+  --yellow:     #FFCB25;
+  --yellow-deep:#E0B000;
+  --on-ink:     #FCFBF9;
+  --on-red:     #FCFBF9;
+  --logo-ink:   #0D0D0B;   /* the mark keeps its own outline in every theme */
+
+  /* Structure: the box in three numbers */
+  --stroke:     3px;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --px:         8px;
+
+  /* Type */
+  --font-sans:  "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono:  "Azeret Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --wide:       112%;   /* headline width on the Archivo wdth axis */
+  --narrow:     90%;    /* small labels */
+
+  --t-xs:   0.8125rem;
+  --t-sm:   0.9375rem;
+  --t-base: 1.0625rem;
+  --t-lg:   1.25rem;
+  --t-xl:   1.5625rem;
+  --t-2xl:  2rem;
+  --t-3xl:  2.625rem;
+  --t-display: clamp(2.9rem, 1.1rem + 5.5vw, 5.5rem);
+
+  /* Space on an 8px grid */
+  --s1: 8px;  --s2: 16px; --s3: 24px; --s4: 32px; --s5: 40px;
+  --s6: 48px; --s8: 64px; --s10: 80px; --s12: 96px; --s16: 128px;
+
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-pop: cubic-bezier(0.2, 0.8, 0.2, 1.18);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper:      #131211;
+    --paper-2:    #1D1B19;
+    --ink:        #F4F2EE;
+    --ink-2:      #BBB5AE;
+    --ink-3:      #8F8982;
+    --line:       rgba(244, 242, 238, 0.16);
+    --red:        #F5342C;
+    --red-deep:   #D8241D;
+    --yellow:     #FFCB25;
+    --yellow-deep:#E0B000;
+    --on-ink:     #131211;
+    --on-red:     #FCFBF9;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper:      #131211;
+  --paper-2:    #1D1B19;
+  --ink:        #F4F2EE;
+  --ink-2:      #BBB5AE;
+  --ink-3:      #8F8982;
+  --line:       rgba(244, 242, 238, 0.16);
+  --red:        #F5342C;
+  --red-deep:   #D8241D;
+  --yellow:     #FFCB25;
+  --yellow-deep:#E0B000;
+  --on-ink:     #131211;
+  --on-red:     #FCFBF9;
+}

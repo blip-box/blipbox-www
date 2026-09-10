@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>blipbox</title>
+  <meta name="description" content="blipbox is an open-source software factory by nimbous. Agents draft, an engineer reads every change and signs the release. First out of the box: sluggi.">
+  <meta name="theme-color" content="#FCFBF9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="blipbox">
+  <meta property="og:description" content="Open source, built in blips. A software factory where agents draft and an engineer signs every release.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blipbox.io/">
+  <meta property="og:image" content="https://blipbox.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The blipbox mark, a red and yellow box, next to the words: blipbox. Open source, built in blips.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@blip_box">
+  <meta name="twitter:title" content="blipbox">
+  <meta name="twitter:description" content="Open source, built in blips. A software factory where agents draft and an engineer signs every release.">
+  <meta name="twitter:image" content="https://blipbox.io/assets/og.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..112,400..800&family=Azeret+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="brand/tokens.css">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+
+<header class="wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="blipbox, home">
+      <svg viewBox="0 0 1024 1024" aria-hidden="true">
+        <g stroke="#0D0D0B" stroke-width="34" stroke-linejoin="round">
+          <polygon fill="#FFCB25" points="651,335 791,239 791,671 651,767"/>
+          <polygon fill="#FFCB25" points="225,335 651,335 791,239 365,239"/>
+          <rect fill="#EF2720" x="225" y="335" width="426" height="432" rx="18"/>
+        </g>
+        <g fill="#FFCB25" stroke="#FFCB25" stroke-width="14" stroke-linejoin="round">
+          <path d="M380 441 H470 V549 H409 V613 H323 V502 H380 Z"/>
+          <rect x="497" y="611" width="46" height="56" rx="4"/>
+        </g>
+      </svg>
+      <span>blipbox</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#factory">Factory</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://github.com/blip-box" rel="noopener">GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top" tabindex="-1">
+
+  <section class="wrap hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">Open source, built in blips.</h1>
+      <p class="lede">blipbox is an open-source software factory: agents draft, an engineer reads every change and signs the release. Each release is a blip, kept small enough to read in one sitting.</p>
+      <div class="actions">
+        <a class="btn" href="#projects">See what has shipped</a>
+        <a class="btn btn--ghost" href="#factory">How the factory works</a>
+      </div>
+      <p class="status"><span>First box: <a href="https://github.com/blip-box/sluggi" rel="noopener">sluggi</a> 0.1.2, a Python library and CLI for clean, URL-safe slugs. 20,000 slugs in 0.74 seconds, 86% test coverage, MIT.</span></p>
+    </div>
+    <div class="hero-mark">
+      <svg viewBox="0 0 1024 1024" role="img" aria-labelledby="hero-mark-title">
+        <title id="hero-mark-title">The blipbox mark: a red and yellow box emitting small yellow blips</title>
+        <style>
+          .blip { animation: emit 4.5s cubic-bezier(0.15, 0.7, 0.3, 1) infinite; }
+          .blip:nth-child(2) { animation-delay: 1.5s; }
+          .blip:nth-child(3) { animation-delay: 3s; }
+          @keyframes emit {
+            0%   { transform: translateY(0);      opacity: 1; }
+            55%  { opacity: 1; }
+            100% { transform: translateY(-270px); opacity: 0; }
+          }
+          @media (prefers-reduced-motion: reduce) { .blip { animation: none; opacity: 0; } }
+        </style>
+        <g fill="#FFCB25">
+          <rect class="blip" x="478" y="256" width="44" height="44" rx="7"/>
+          <rect class="blip" x="404" y="268" width="34" height="34" rx="6"/>
+          <rect class="blip" x="560" y="262" width="28" height="28" rx="5"/>
+        </g>
+        <g stroke="#0D0D0B" stroke-width="30" stroke-linejoin="round">
+          <polygon fill="#FFCB25" points="651,335 791,239 791,671 651,767"/>
+          <polygon fill="#FFCB25" points="225,335 651,335 791,239 365,239"/>
+          <rect fill="#EF2720" x="225" y="335" width="426" height="432" rx="18"/>
+        </g>
+        <g fill="#FFCB25" stroke="#FFCB25" stroke-width="14" stroke-linejoin="round">
+          <path d="M380 441 H470 V549 H409 V613 H323 V502 H380 Z"/>
+          <rect x="497" y="611" width="46" height="56" rx="4"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="wrap section" id="projects" aria-labelledby="projects-title">
+    <div class="section-head">
+      <h2 id="projects-title">Out of the box</h2>
+      <p>Each project is a box: one job, done completely, MIT-licensed. Every box gets its own pixel mark, generated from its name, so the factory can brand what it builds.</p>
+    </div>
+
+    <article class="box" aria-labelledby="sluggi-title">
+      <div class="box-face">
+        <svg data-sprite="sluggi" role="img" aria-label="sluggi mark"></svg>
+      </div>
+      <div class="box-body">
+        <p class="box-kind">Python library and CLI</p>
+        <h3 id="sluggi-title">sluggi</h3>
+        <p>Turns any text into a clean, URL-safe slug. Latin diacritics, Greek, and Cyrillic transliterated out of the box, emoji as an optional extra. Serial, thread, and process batch modes, an asyncio API, and a CLI with shell completion. 20,000 strings in 0.74 seconds on the included benchmark.</p>
+        <dl class="facts">
+          <dt>Install</dt><dd><code>pip install sluggi</code></dd>
+          <dt>License</dt><dd>MIT</dd>
+          <dt>Tests</dt><dd>86% coverage, run on every pull request</dd>
+          <dt>Source</dt><dd><a href="https://github.com/blip-box/sluggi" rel="noopener">github.com/blip-box/sluggi</a></dd>
+          <dt>Package</dt><dd><a href="https://pypi.org/project/sluggi/" rel="noopener">pypi.org/project/sluggi</a></dd>
+        </dl>
+        <div class="try">
+          <label for="slug-in">Try it. Type anything and the slug updates as you type.</label>
+          <div class="try-row">
+            <input id="slug-in" type="text" value="Привет, мир! Café №1 ☕" autocomplete="off" spellcheck="false" aria-describedby="try-note">
+            <span class="belt-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <output id="slug-out" for="slug-in" aria-live="polite">privet-mir-cafe-no1</output>
+          </div>
+          <p class="try-note" id="try-note">An in-browser approximation of sluggi's default pipeline: normalize, transliterate, lowercase, extract words, join. The Python library does more, faster.</p>
+        </div>
+      </div>
+    </article>
+
+    <p class="more">More boxes are on the belt. New projects appear here when they ship. Work in progress lives in the <a href="https://github.com/blip-box" rel="noopener">blip-box organization on GitHub</a>.</p>
+  </section>
+
+  <section class="wrap section" id="factory" aria-labelledby="factory-title">
+    <div class="section-head">
+      <h2 id="factory-title">How a blip ships</h2>
+      <p>We call the pipeline the belt. Agents do the volume, one engineer does the judgment, and every step leaves a trace anyone can read.</p>
+    </div>
+    <ol class="belt">
+      <li>
+        <h3>Intake</h3>
+        <p>An issue, an idea, or a gap in a tool we use ourselves becomes a short spec with a clear finish line.</p>
+      </li>
+      <li>
+        <h3>Draft</h3>
+        <p>Agents write the first draft of the code, the tests, and the docs, in a pull request. Nothing goes straight to main.</p>
+      </li>
+      <li>
+        <h3>Review</h3>
+        <p>An engineer reads every change before it merges. Every change arrives as a pull request with CI passing, and the branch rules are public.</p>
+      </li>
+      <li data-ship>
+        <h3>Ship</h3>
+        <p>A tagged release, signed with Sigstore and published to PyPI, with a changelog entry and the engineer's name on it.</p>
+      </li>
+      <li>
+        <h3>Learn</h3>
+        <p>Whatever slowed the belt goes back into it: better checks, sharper prompts, tighter tools.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap section" id="principles" aria-labelledby="principles-title">
+    <div class="section-head">
+      <h2 id="principles-title">What goes in the box</h2>
+      <p>Six rules every project keeps, whoever or whatever wrote the code.</p>
+    </div>
+    <ul class="principles">
+      <li><strong>One job per tool.</strong><p>A box does one thing and does it completely. Scope creep gets its own box.</p></li>
+      <li><strong>Numbers, not adjectives.</strong><p>Every box ships a benchmark script and its results, and a release that gets slower needs a reason.</p></li>
+      <li><strong>Unicode is not an edge case.</strong><p>Every input is someone's language. Scripts, emoji, and odd whitespace are the normal case.</p></li>
+      <li><strong>Tests before trust.</strong><p>An agent's draft earns its merge with tests, and the tests are read as carefully as the code.</p></li>
+      <li><strong>MIT, always.</strong><p>Use it, fork it, sell it. No strings, no surprise relicensing.</p></li>
+      <li><strong>One person signs off.</strong><p>An engineer's name is on every release, and they can explain every line in it.</p></li>
+    </ul>
+  </section>
+
+  <section class="wrap section" id="about" aria-labelledby="about-title">
+    <div class="section-head">
+      <h2 id="about-title">Made by nimbous</h2>
+      <p>An engineering consultancy's open-source arm, and its lab for how software gets built next.</p>
+    </div>
+    <div class="about">
+      <div class="about-text">
+        <p>blipbox is an initiative by <a href="https://nimbous.co" rel="noopener">nimbous</a>, an engineering consultancy that has solved hard machine learning, AI, infrastructure, and data engineering problems for business customers since 2018.</p>
+        <p>blipbox is where that experience goes into open source, and where we learn, in public, how an agentic software factory should work: what to hand to agents, what to keep for people, and how to tell when a tool is done.</p>
+        <p>What blipbox becomes is open: a product line, a brand, or a company of its own. For now it is a box that ships.</p>
+      </div>
+      <ul class="about-links">
+        <li><a href="https://github.com/blip-box" rel="noopener">GitHub<span>github.com/blip-box</span></a></li>
+        <li><a href="https://pypi.org/project/sluggi/" rel="noopener">PyPI<span>sluggi</span></a></li>
+        <li><a href="https://x.com/blip_box" rel="noopener">X<span>@blip_box</span></a></li>
+        <li><a href="https://nimbous.co" rel="noopener">nimbous<span>nimbous.co</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#top" aria-label="blipbox, back to top">
+        <svg viewBox="0 0 1024 1024" aria-hidden="true">
+          <g stroke="#0D0D0B" stroke-width="34" stroke-linejoin="round">
+            <polygon fill="#FFCB25" points="651,335 791,239 791,671 651,767"/>
+            <polygon fill="#FFCB25" points="225,335 651,335 791,239 365,239"/>
+            <rect fill="#EF2720" x="225" y="335" width="426" height="432" rx="18"/>
+          </g>
+          <g fill="#FFCB25" stroke="#FFCB25" stroke-width="14" stroke-linejoin="round">
+            <path d="M380 441 H470 V549 H409 V613 H323 V502 H380 Z"/>
+            <rect x="497" y="611" width="46" height="56" rx="4"/>
+          </g>
+        </svg>
+        <span>blipbox</span>
+      </a>
+      <p>Open source, built in blips. A software factory by nimbous, where agents draft and an engineer signs every release.</p>
+    </div>
+    <div>
+      <h4>Projects</h4>
+      <ul>
+        <li><a href="https://github.com/blip-box/sluggi" rel="noopener">sluggi</a></li>
+        <li><a href="https://github.com/blip-box" rel="noopener">All repositories</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Factory</h4>
+      <ul>
+        <li><a href="#factory">How a blip ships</a></li>
+        <li><a href="#principles">What goes in the box</a></li>
+        <li><a href="#about">Made by nimbous</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="https://github.com/blip-box" rel="noopener">GitHub</a></li>
+        <li><a href="https://pypi.org/project/sluggi/" rel="noopener">PyPI</a></li>
+        <li><a href="https://x.com/blip_box" rel="noopener">X</a></li>
+        <li><a href="https://nimbous.co" rel="noopener">nimbous.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span>© 2026 Nimbous. Code is MIT-licensed. The blipbox name and mark are not.</span>
+    <span>blipbox.io and blip-box.com</span>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

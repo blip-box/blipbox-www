@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>blipbox social card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..112,400..800&display=block" rel="stylesheet">
+  <style>
+    /* 1200x630 Open Graph card. Rendered to assets/og.png by scripts/render-og.py. */
+    html, body { margin: 0; }
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #FCFBF9;
+      color: #0D0D0B;
+      font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      box-sizing: border-box;
+      width: 1200px;
+      height: 630px;
+      padding: 72px 80px;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 56px;
+      align-items: center;
+    }
+    .wordmark {
+      font-size: 132px;
+      font-weight: 800;
+      font-stretch: 112%;
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+    }
+    .tag {
+      margin-top: 28px;
+      font-size: 44px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      line-height: 1.15;
+      color: #4A4744;
+      max-width: 14ch;
+    }
+    .meta {
+      margin-top: 44px;
+      padding-top: 24px;
+      border-top: 3px solid #0D0D0B;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 600;
+      font-stretch: 90%;
+      color: #706A64;
+    }
+    .meta b { color: #0D0D0B; font-weight: 700; font-stretch: 100%; }
+    .mark { width: 400px; height: 400px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div>
+      <div class="wordmark">blipbox</div>
+      <div class="tag">Open source,<br>built in blips.</div>
+      <div class="meta"><span>An initiative by nimbous</span><b>blipbox.io</b></div>
+    </div>
+    <svg class="mark" viewBox="0 0 1024 1024" aria-hidden="true">
+      <g fill="#FFCB25">
+        <rect x="478" y="130" width="44" height="44" rx="7"/>
+        <rect x="404" y="192" width="34" height="34" rx="6" opacity="0.7"/>
+      </g>
+      <g stroke="#0D0D0B" stroke-width="30" stroke-linejoin="round">
+        <polygon fill="#FFCB25" points="651,335 791,239 791,671 651,767"/>
+        <polygon fill="#FFCB25" points="225,335 651,335 791,239 365,239"/>
+        <rect fill="#EF2720" x="225" y="335" width="426" height="432" rx="18"/>
+      </g>
+      <g fill="#FFCB25" stroke="#FFCB25" stroke-width="14" stroke-linejoin="round">
+        <path d="M380 441 H470 V549 H409 V613 H323 V502 H380 Z"/>
+        <rect x="497" y="611" width="46" height="56" rx="4"/>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
