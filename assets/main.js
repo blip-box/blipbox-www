@@ -159,6 +159,7 @@
       if (window.scrollY > 240) showConsent();
     }
     function onClick(event) {
+      if (event.target.closest("#consent")) return;
       if (event.target.closest(".btn, .nav-links a, #slug-in")) showConsent();
     }
     window.addEventListener("scroll", onScroll, { passive: true });
