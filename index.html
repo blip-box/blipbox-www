@@ -24,11 +24,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..112,400..800&family=Azeret+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FG580K8YM"></script>
+  <!-- Google Analytics with Consent Mode v2. Every storage type is denied by
+       default, so the tag runs without cookies until something calls
+       gtag('consent', 'update', {...}) with 'granted'. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FG580K8YM"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-3FG580K8YM');
   </script>
