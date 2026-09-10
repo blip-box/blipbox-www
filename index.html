@@ -36,6 +36,13 @@
       'ad_personalization': 'denied',
       'analytics_storage': 'denied'
     });
+    // A visitor who allowed analytics on an earlier visit is counted on this one.
+    try {
+      var stored = JSON.parse(localStorage.getItem('blipbox-consent'));
+      if (stored && stored.value === 'granted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    } catch (e) {}
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FG580K8YM"></script>
   <script>
@@ -269,6 +276,15 @@
   </div>
 </footer>
 
+<div class="consent" id="consent" hidden role="region" aria-label="Analytics opt-in">
+  <p>Can we count your visit? Google Analytics runs without cookies until you allow them.</p>
+  <div class="consent-actions">
+    <button type="button" class="btn" data-consent="granted">Allow</button>
+    <button type="button" class="btn btn--ghost" data-consent="denied">No thanks</button>
+  </div>
+</div>
+
 <script src="assets/main.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7c8e1ef34e9b4410a5b4f1c829090fcf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

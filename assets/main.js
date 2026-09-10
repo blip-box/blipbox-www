@@ -113,5 +113,70 @@
     update();
   }
 
+  /* Analytics opt-in ------------------------------------------------------
+     Google Analytics starts with all storage denied (see the head of
+     index.html). This asks once, only after the visitor has shown some
+     interest: scrolled a bit or clicked a button. "Allow" is remembered and
+     applied before the tag loads on later visits. "No thanks" is remembered
+     for 180 days. Cloudflare Web Analytics is cookieless and not affected. */
+
+  var CONSENT_KEY = "blipbox-consent";
+
+  function readConsent() {
+    try {
+      var stored = JSON.parse(localStorage.getItem(CONSENT_KEY));
+      if (!stored || !stored.value) return null;
+      if (stored.value === "denied" && Date.now() - stored.at > 180 * 864e5) return null;
+      return stored.value;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function writeConsent(value) {
+    try {
+      localStorage.setItem(CONSENT_KEY, JSON.stringify({ value: value, at: Date.now() }));
+    } catch (e) {}
+  }
+
+  function applyConsent(value) {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("consent", "update", { analytics_storage: value });
+    if (value === "granted") window.gtag("event", "page_view");
+  }
+
+  var consentBox = document.getElementById("consent");
+  if (consentBox && !readConsent()) {
+    var shown = false;
+    function showConsent() {
+      if (shown) return;
+      shown = true;
+      consentBox.hidden = false;
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("click", onClick);
+    }
+    function onScroll() {
+      if (window.scrollY > 240) showConsent();
+    }
+    function onClick(event) {
+      if (event.target.closest(".btn, .nav-links a, #slug-in")) showConsent();
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    document.addEventListener("click", onClick);
+    onScroll();
+
+    consentBox.addEventListener("click", function (event) {
+      var choice = event.target.closest("[data-consent]");
+      if (!choice) return;
+      var value = choice.getAttribute("data-consent");
+      writeConsent(value);
+      applyConsent(value);
+      consentBox.hidden = true;
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !consentBox.hidden) consentBox.hidden = true;
+    });
+  }
+
   window.blipbox = { slugify: slugify, spriteCells: spriteCells };
 })();

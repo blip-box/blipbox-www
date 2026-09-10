@@ -67,6 +67,14 @@ Any static host works. Two reasonable options:
 - **Cloudflare Pages** with the repo root as the output directory.
 
 
+## Analytics
+
+Two trackers, both declared in `index.html`. Cloudflare Web Analytics is
+cookieless and always on. Google Analytics loads with every storage type
+denied and only sets cookies after a visitor accepts the small opt-in that
+appears once they scroll or click a button; the answer is kept in local
+storage.
+
 ## License
 
 Code is MIT, see [LICENSE](LICENSE). The blipbox name, wordmark, and cube mark

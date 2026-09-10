@@ -52,6 +52,8 @@ code {
   border-radius: 6px;
 }
 svg { display: block; }
+[hidden] { display: none !important; }
+button.btn { font-family: inherit; cursor: pointer; }
 
 .wrap {
   width: 100%;
@@ -511,10 +513,42 @@ svg { display: block; }
   .footer-brand { grid-column: 1 / -1; }
 }
 
+/* Analytics opt-in: small, bottom-left, shown only after scroll or a click --- */
+
+.consent {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 20;
+  max-width: 340px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  border: var(--stroke) solid var(--ink);
+  border-radius: var(--radius);
+  font-size: var(--t-sm);
+  line-height: 1.45;
+  animation: rise 0.35s var(--ease-out) both;
+}
+.consent p { margin: 0; }
+.consent-actions { display: flex; gap: 8px; }
+.consent .btn { padding: 9px 14px; font-size: var(--t-sm); }
+
+@keyframes rise {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 560px) {
+  .consent { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+}
+
 /* Motion --------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-mark, .hero-mark svg, .btn { transition: none; animation: none; }
+  .hero-mark, .hero-mark svg, .btn, .consent { transition: none; animation: none; }
   .hero-mark:hover { transform: none; }
 }
