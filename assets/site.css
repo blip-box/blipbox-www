@@ -251,6 +251,8 @@ button.btn { font-family: inherit; cursor: pointer; }
   background: var(--paper);
 }
 
+.box + .box { margin-top: var(--s5); }
+
 .box-face {
   background: var(--red);
   border-right: var(--stroke) solid var(--ink);
@@ -268,6 +270,19 @@ button.btn { font-family: inherit; cursor: pointer; }
   font-stretch: var(--narrow);
   color: var(--ink-3);
   margin-bottom: 6px;
+}
+/* Release state beside the kind, for a box that is not stable yet */
+.tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  border-radius: 4px;
+  background: var(--yellow);
+  color: var(--logo-ink);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  font-stretch: var(--narrow);
+  vertical-align: 1px;
 }
 .box-body h3 {
   font-size: var(--t-2xl);

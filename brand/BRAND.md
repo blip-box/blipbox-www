@@ -34,8 +34,9 @@ kept small enough to read in one sitting.
 that has solved hard machine learning, AI, infrastructure, and data
 engineering problems for business customers since 2018. blipbox is where that
 experience goes into open source, and where we learn, in public, how an
-agentic software factory should work. First out of the box: sluggi, a Python
-library and CLI for clean, URL-safe slugs.
+agentic software factory should work. Out of the box so far: sluggi, a Python
+library and CLI for clean, URL-safe slugs, and confusable, Unicode spoofing and
+look-alike detection for Python.
 
 **Relationship to nimbous.** Say "an initiative by nimbous". Never "a division
 of" or "a product of".
@@ -45,7 +46,7 @@ of" or "a product of".
 - Web: blipbox.io (blip-box.com redirects there)
 - Code: github.com/blip-box
 - X: x.com/blip_box, handle `@blip_box`
-- Packages: pypi.org/project/sluggi
+- Packages: pypi.org/project/sluggi, pypi.org/project/confusable
 
 ## Claims
 

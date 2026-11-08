@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>blipbox</title>
-  <meta name="description" content="blipbox is an open-source software factory by nimbous. Agents draft, an engineer reads every change and signs the release. First out of the box: sluggi.">
+  <meta name="description" content="blipbox is an open-source software factory by nimbous. Agents draft, an engineer reads every change and signs the release. Out of the box so far: sluggi and confusable.">
   <meta name="theme-color" content="#FCFBF9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="blipbox">
@@ -90,7 +90,7 @@
         <a class="btn" href="#projects">See what has shipped</a>
         <a class="btn btn--ghost" href="#factory">How the factory works</a>
       </div>
-      <p class="status"><span>First box: <a href="https://github.com/blip-box/sluggi" rel="noopener">sluggi</a> 0.1.2, a Python library and CLI for clean, URL-safe slugs. 20,000 slugs in 0.74 seconds, 86% test coverage, MIT.</span></p>
+      <p class="status"><span>Latest box: <a href="#confusable-title">confusable</a> 0.1.0a1, look-alike and spoofing detection for Unicode text. Alpha, 99% line coverage, MIT.</span></p>
     </div>
     <div class="hero-mark">
       <svg viewBox="0 0 1024 1024" role="img" aria-labelledby="hero-mark-title">
@@ -157,6 +157,27 @@
       </div>
     </article>
 
+    <article class="box" aria-labelledby="confusable-title">
+      <div class="box-face">
+        <svg data-sprite="confusable" role="img" aria-label="confusable mark"></svg>
+      </div>
+      <div class="box-body">
+        <p class="box-kind">Python library <span class="tag">Alpha</span></p>
+        <h3 id="confusable-title">confusable</h3>
+        <p>Tells you when text looks like something it is not: p&#x430;ypal spelled with a Cyrillic &#x430;, a zero-width space hidden in a username, or a right-to-left override that makes an .exe file display as a .jpg. It follows Unicode Technical Standard #39 in pure Python with no runtime dependencies, and is tested against ICU and Rust's unicode-security over every Unicode code point.</p>
+        <dl class="facts">
+          <dt>Install</dt><dd><code>pip install --pre confusable</code></dd>
+          <dt>Status</dt><dd>Alpha, 0.1.0a1. pip installs it only with <code>--pre</code>.</dd>
+          <dt>License</dt><dd>MIT. The Unicode data is under the Unicode License v3.</dd>
+          <dt>Tests</dt><dd>99% line coverage at 0.1.0a1, run on every pull request</dd>
+          <dt>Python</dt><dd>3.10 to 3.15</dd>
+          <dt>Migrate</dt><dd>From confusable_homoglyphs, change one import</dd>
+          <dt>Source</dt><dd><a href="https://github.com/blip-box/confusable" rel="noopener">github.com/blip-box/confusable</a></dd>
+          <dt>Package</dt><dd><a href="https://pypi.org/project/confusable/" rel="noopener">pypi.org/project/confusable</a></dd>
+        </dl>
+      </div>
+    </article>
+
     <p class="more">More boxes are on the belt. New projects appear here when they ship. Work in progress lives in the <a href="https://github.com/blip-box" rel="noopener">blip-box organization on GitHub</a>.</p>
   </section>
 
@@ -218,6 +239,7 @@
       <ul class="about-links">
         <li><a href="https://github.com/blip-box" rel="noopener">GitHub<span>github.com/blip-box</span></a></li>
         <li><a href="https://pypi.org/project/sluggi/" rel="noopener">PyPI<span>sluggi</span></a></li>
+        <li><a href="https://pypi.org/project/confusable/" rel="noopener">PyPI<span>confusable</span></a></li>
         <li><a href="https://x.com/blip_box" rel="noopener">X<span>@blip_box</span></a></li>
         <li><a href="https://nimbous.co" rel="noopener">nimbous<span>nimbous.co</span></a></li>
       </ul>
@@ -249,6 +271,7 @@
       <h4>Projects</h4>
       <ul>
         <li><a href="https://github.com/blip-box/sluggi" rel="noopener">sluggi</a></li>
+        <li><a href="https://github.com/blip-box/confusable" rel="noopener">confusable</a></li>
         <li><a href="https://github.com/blip-box" rel="noopener">All repositories</a></li>
       </ul>
     </div>
